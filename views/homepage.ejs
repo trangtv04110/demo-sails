@@ -1,0 +1,22 @@
+<div class="wrapper" ng-app="UserApp" ng-controller="IndexController">
+	<h2>List of users</h2>
+	<table class="table table-bordered table-hover">
+		<tr>
+			<th>#</th>
+			<th>Online</th>
+			<th>Fullname</th>
+			<th>Email</th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="user in users">
+			<td>{{ user.id }}</td>
+			<td>{{ user.isOnline ? 'On' : 'Off' }}</td>
+			<td>{{ user.fullname }}</td>
+			<td>{{ user.email }}</td>
+			<td>
+				<a href="#"><i class="glyphicon glyphicon-edit"></i></a> 
+				<a href="#"><i class="glyphicon glyphicon-trash"></i></a>
+			</td>
+		</tr>
+	</table>
+</div>
